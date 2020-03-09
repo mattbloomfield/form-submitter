@@ -3,7 +3,6 @@ const mysql = require('mysql');
 const SQL = require('sql-template-strings')
 const express = require('express');
 const bodyParser = require('body-parser');
-const sqlinjection = require('sql-injection');
 const app = express();
 
 const port = 3535;
@@ -22,13 +21,13 @@ const sqlPool = mysql.createPool({
 
 app.use(express.static('public'))
 app.use(bodyParser.json());
-app.use(sqlinjection);
 
 app.post('/submit', function (req, res) {
     const subName = req.body.name;
     const subEmail = req.body.email;
     const subPhone = req.body.phone;
     if (!subName || !subEmail || !subPhone) {
+        console.error('malformed request', req.body);
         respondWithError(res, 400, {
             status: 'Missing Fields',
             message: 'Please include `name`, `email`, and `phone` in the body of this request'
@@ -36,7 +35,6 @@ app.post('/submit', function (req, res) {
         return;
     }
     // We should handle basic sql injection problems here. 
-    // Using npm package middleware for brevity sake but haven't truly explored it's abilities
     let query = SQL`INSERT IGNORE INTO `;
     query.append(credentials.mysql.table);
     query.append(SQL`
