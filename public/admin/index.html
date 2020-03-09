@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | P2A Project</title>
+    <link rel="stylesheet" href="../assets/global.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <a href="/"><img id="Logo" src="../assets/logo.png"></a>
+        <h1>Green Sunrise Gear Co.</h1>
+    </header>
+    <div id="Content">
+        <div id="InstructionalContent">
+            <h2>Administration Portal</h2>
+            <p>This portal is for authorized users only. Please use the following tools responsibly and according to <a
+                    href="#">associated company policies</a> as documented in the wiki.</p>
+        </div>
+        <section>
+            <h3>Send a text message to all subscribers</h3>
+            <form id="TextMessageForm">
+                <label for="TextMessageContent">
+                    <span>Text Message Content</span>
+                    <textarea id="TextMessageContent"></textarea>
+                </label>
+                <input type="submit" value="Send Message" />
+            </form>
+            <div id="Status"></div>
+        </section>
+        <section>
+            <h3>See the Results</h3>
+            <div id="Results"></div>
+        </section>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

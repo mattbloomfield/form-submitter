@@ -1,0 +1,23 @@
+{
+  "name": "phone2action_interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server/index.js"
+  },
+  "author": "Matthew Bloomfield",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "sql-injection": "0.0.6",
+    "sql-template-strings": "^2.2.2",
+    "twilio": "^3.40.0"
+  }
+}

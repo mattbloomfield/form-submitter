@@ -1,0 +1,50 @@
+#Content {
+    max-width: 400px;
+}
+
+#MarketingContent {
+    padding: 1em;
+}
+
+#MarketingContent p {
+    color: #aaa;
+}
+
+#Form {
+    border-top: 1px solid #ddd;
+    padding: 1em;
+}
+
+#Form label {
+    display: block;
+    font-size: .8em;
+    margin: 1em auto;
+}
+
+#Form label input[type="text"] {
+    display: block;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    background: #FFF;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top:4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#Form input[type="submit"] {
+    display: block;
+    border: 1px solid #1975DC;
+    padding: 8px 12px;
+    background: #1975DC;
+    color: #FFF;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top:4px;
+}
+
+#Status {
+    text-align: center;
+    padding: 1em;
+}
