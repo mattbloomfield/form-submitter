@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mysql": "^2.18.1",
     "sql-injection": "0.0.6",
     "sql-template-strings": "^2.2.2",
